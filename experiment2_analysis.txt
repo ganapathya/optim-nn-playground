@@ -1,0 +1,40 @@
+
+EXPERIMENT 2 ANALYSIS: Enhanced Architecture with BN and Regularization
+
+TARGETS:
+- Target Accuracy: ≥99.0%
+- Parameter Limit: <8,000
+- Epoch Limit: ≤15
+- Goal: Improve training stability and reduce overfitting with BN and Dropout
+
+RESULTS:
+- Parameters Used: 6,056 (✓ within budget)
+- Best Train Accuracy: 98.66%
+- Best Test Accuracy: 98.96% (✗ target achieved)
+- Final Train Accuracy: 98.66%
+- Final Test Accuracy: 98.84%
+- Epochs Used: 15/15
+
+ARCHITECTURE ENHANCEMENTS:
+- Added Batch Normalization to all convolutional layers
+- Introduced Dropout (0.1 rate) for regularization
+- Improved activation ordering: Conv→ReLU→BatchNorm→Dropout
+- Maintained efficient parameter usage while adding normalization
+- Same receptive field (22) with enhanced training stability
+
+TECHNIQUE ANALYSIS:
+- Batch Normalization: Provides training stability and faster convergence
+- Dropout Regularization: Prevents overfitting, improves generalization
+- Parameter overhead: Only +152 parameters for BN layers
+- Training dynamics: More stable gradients, consistent performance
+
+PERFORMANCE ANALYSIS:
+- NEEDS IMPROVEMENT: Fell short by 0.04%
+- Significant improvement over Experiment 1
+- Better training stability with BN
+- Regularization helps prevent overfitting
+
+NEXT STEPS:
+- Add data augmentation for better generalization
+- Implement learning rate scheduling
+- Optimize architecture for 99.4% target
